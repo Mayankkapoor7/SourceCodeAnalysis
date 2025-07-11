@@ -27,9 +27,7 @@ def clone_repo(repo_url, target_dir=REPO_DIR):
     except Exception as e:
         st.error(f"Error cloning repo: {e}")
         return None
-
-# Streamlit UI
-st.title("💻 GitHub Repo Source Code Q&A with Langchain and OpenAI")
+st.title("GitHub Repo Source Code Q&A with Langchain and OpenAI")
 
 openai_api_key = st.text_input("Enter your OpenAI API key:", type="password")
 repo_url = st.text_input("Enter GitHub repository HTTPS URL (e.g. https://github.com/user/repo.git)")
